@@ -6,9 +6,7 @@ const Posts = ({ posts }) => {
     <div className='posts'>
       <ol>
         {posts.map(post => (
-          <li key={post.id}>
-            {post.title}
-          </li>
+          <li key={post.id}>{post.title}</li>
         ))}
       </ol>
     </div>
