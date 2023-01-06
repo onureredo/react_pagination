@@ -7,7 +7,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   
 
-  //pagination
+  //paginationn
   const [currentPage, setCurrentpage] = useState(1);
   const [postPerPage, setPostsPerPage] = useState(10);
 
