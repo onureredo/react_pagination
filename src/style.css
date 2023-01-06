@@ -74,8 +74,9 @@
 }
 
 .pagination a:hover {
-  transition: ease-in-out 0.25s;
-  color: crimson;
+  transition: all .5s;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .pagination a:focus {

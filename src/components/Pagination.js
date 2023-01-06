@@ -6,6 +6,10 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 //   .fill()
 //   .map((el, i) => i + 1);
 
+// for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+//   pageNumbers.push(i);
+// }
+
   return (
     <div className="pagination">
       <ul>
