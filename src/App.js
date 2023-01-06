@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Posts from './components/Posts';
+import Pagination from './components/Pagination';
 import './style.css';
 
-//https://jsonplaceholder.typicode.com/posts
 function App() {
   const [posts, setPosts] = useState([]);
 
@@ -25,7 +25,7 @@ function App() {
 
   //get current posts
   const indexOfLastPost = currentPage * postsPerPage; //index of the last post
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage; 
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
 
@@ -33,8 +33,9 @@ function App() {
   return (
     <div className="container">
       <h1>POSTS</h1>
-      {/* <Posts posts={posts}/>            */}
-      <Posts posts={currentPosts}/>           
+      {/* <Posts posts={posts}/>*/}
+      <Posts posts={currentPosts}/>
+      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length}/>      
     </div>
   );
 }
