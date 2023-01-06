@@ -9,7 +9,7 @@ function App() {
 
   //pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage] = useState(10);
 
 
   useEffect(() => {
@@ -28,14 +28,19 @@ function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage; 
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-
+  // change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   
   return (
     <div className="container">
       <h1>POSTS</h1>
       {/* <Posts posts={posts}/>*/}
       <Posts posts={currentPosts}/>
-      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length}/>      
+      <Pagination 
+        postsPerPage={postsPerPage} 
+        totalPosts={posts.length} 
+        paginate={paginate}
+      />      
     </div>
   );
 }
