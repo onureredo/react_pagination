@@ -7,10 +7,6 @@ import './style.css';
 function App() {
   const [posts, setPosts] = useState([]);  
 
-  //paginationn
-  const [currentPage, setCurrentpage] = useState(); // 1
-  const [postPerPage, setPostsPerPage] = useState(); // 10
-
   useEffect(() => {
     const fetchPosts = async () => {      
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
