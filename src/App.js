@@ -8,8 +8,8 @@ function App() {
   const [posts, setPosts] = useState([]);  
 
   //paginationn
-  const [currentPage, setCurrentpage] = useState(1);
-  const [postPerPage, setPostsPerPage] = useState(10);
+  const [currentPage, setCurrentpage] = useState(); // 1
+  const [postPerPage, setPostsPerPage] = useState(); // 10
 
   useEffect(() => {
     const fetchPosts = async () => {      
@@ -23,9 +23,8 @@ function App() {
   // console.log(posts);
   return (
     <div className="container">
-
-      <Posts posts={posts}/>
-     
+      <h1>POSTS</h1>
+      <Posts posts={posts}/>           
     </div>
   );
 }
