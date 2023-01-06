@@ -1,14 +1,15 @@
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     
   const pageNumbers = Array.from( Array(Math.ceil(totalPosts / postsPerPage)),(el, i) => i + 1 )
+  
+  // const pageNumbers = Array(Math.ceil(totalPosts / postsPerPage))
+  // .fill()
+  // .map((el, i) => i + 1);
 
-//   const pageNumbers = Array(Math.ceil(totalPosts / postsPerPage))
-//   .fill()
-//   .map((el, i) => i + 1);
-
-// for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-//   pageNumbers.push(i);
-// }
+  // const pageNumbers = [];
+  // for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  //   pageNumbers.push(i);
+  // }
 
   return (
     <div className="pagination">
