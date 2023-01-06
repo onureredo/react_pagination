@@ -1,22 +1,9 @@
-* {
-  background-color: #1b1b1b;
-  color: #fff;
-  list-style: none;
-  margin: 1.5rem 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
 .container {
   font-family: monospace;
-  margin-left: 1rem;
-  min-height: 50vh;
 }
 
-
 .posts li {
-  box-shadow: 2px 2px #4CAF50, -.1em .1em .4em .2em #4CAF50;
+  border: 1px solid #eee;
   padding: 1rem;
   max-width: 80%;
   font-size: 1rem;
@@ -24,23 +11,23 @@
 
 .pagination ul>li {
   display: inline-block;
+  margin: 1rem 0;
 }
 
 .pagination a {
-  color: #fff; 
-  padding: 8px 16px;
-  margin: 1.15rem;
+  padding: 8px 33px;
   text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px #4CAF50, -.1em .1em .4em .2em #4CAF50;
+  border: 1px solid #ddd;
+  
 }
 
 .pagination a:hover {
   transition: ease-in-out 0.25s;
-  color: crimson;
-}
-
-.pagination a.active {
   background-color: #4CAF50;
   color: white;
-} 
+}
+
+.pagination a:focus {
+  background-color: #4CAF50;
+  color: white;
+}
