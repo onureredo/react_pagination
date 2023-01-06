@@ -1,17 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Posts = ({posts}) => {
+const Posts = ({ posts }) => {
 
   return (
-    <div className='posts'>
-        <ul>
-            {posts.map(post = (
-                <li key={post.id}>{post.title}</li>
-            ) )}
-        </ul>
-      
-    </div>
-  )
-}
+    <ul>
+      {posts.map(post => (
+        <li key={post.id}>
+          {post.title}
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-export default Posts
+export default Posts;

@@ -1,11 +1,11 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import Posts from './components/Posts';
 import './style.css';
 
 //https://jsonplaceholder.typicode.com/posts
 function App() {
-  const [posts, setPosts] = useState([]);
-  
+  const [posts, setPosts] = useState([]);  
 
   //paginationn
   const [currentPage, setCurrentpage] = useState(1);
@@ -20,9 +20,11 @@ function App() {
     fetchPosts();
   }, []);
 
-  console.log(posts);
+  // console.log(posts);
   return (
-    <div className="App">
+    <div className="container">
+
+      <Posts posts={posts}/>
      
     </div>
   );
